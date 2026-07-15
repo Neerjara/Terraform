@@ -1,0 +1,9 @@
+# In Azure DevOps or GitHub Actions
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az acr login --name $(ACR_NAME)
+      helm upgrade --install myapp ./charts/myapp --set image.repository=$(ACR_NAME).azurecr.io/myapp
