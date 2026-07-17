@@ -1,4 +1,4 @@
-# In Azure DevOps or GitHub Actions
+# In Azure DevOps or GitHub Actions cicd
 - task: AzureCLI@2
   inputs:
     azureSubscription: $(AZURE_SERVICE_CONNECTION)
