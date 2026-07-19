@@ -2,3 +2,4 @@
 pinning the Terraform vesin
 provider block 
 Resource block 
+Ignore changes to specific attributes managed outside Terraform.
